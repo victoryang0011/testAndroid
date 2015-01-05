@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">helloworld</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+	<string name="other">other activity</string>
+	<string name="aa">ffff</string>
+	<string name="toastTest">笨蛋，点我试试</string>
+	<string name="testDataLable">测试data标签</string>
+	<string name="about">关于</string>
+	<string name="thirdActivity">thirdActivity</string>
+</resources>

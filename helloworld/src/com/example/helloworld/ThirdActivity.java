@@ -1,0 +1,37 @@
+package com.example.helloworld;
+
+import android.app.Activity;
+import android.content.Intent;
+import android.net.Uri;
+import android.os.Bundle;
+import android.view.View;
+import android.view.Window;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.TextView;
+
+public class ThirdActivity extends Activity{
+
+	private TextView myTextView;
+	private Button button;
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
+		setContentView(R.layout.myactivity);
+		myTextView = (TextView)findViewById(R.id.myTextView2);
+		button = (Button)findViewById(R.id.myButton2);
+		button.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				Intent intent = new Intent(Intent.ACTION_VIEW);
+				intent.setAction("android.intent.action.VIEW");
+				intent.setData(Uri.parse("http://www.baidu.com"));
+				startActivity(intent);
+			}
+		});
+		myTextView.setText(R.string.other);
+	}
+
+	
+}
